@@ -1,0 +1,38 @@
+int main() 
+{	int i=0;
+	while(i<10) 
+	{test();
+	 i++;
+	}
+	
+	return 0;
+}
+
+void test()
+{ int a=1;
+  a++;
+  printf("%d\n",a);
+}
+
+//结果是 得到10个2
+
+
+//使用static修饰局部变量  局部范围出括号就自动销毁，static使变量不销毁（改变局部变量的生命周期）  在声明赋初值的话，下次再遇到声明语句就跳过 
+//只添加static
+int main() 
+{	int i=0;
+	while(i<10) 
+	{test();
+	 i++;
+	}
+	
+	return 0;
+}
+
+void test()
+{ static int a=1;//在声明赋初值的话，下次再遇到声明语句就跳过 直接执行a++ 
+  a++;
+  printf("%d\n",a);
+}
+
+//结果是 得到2-11
