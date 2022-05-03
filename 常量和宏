@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+#define max 100  //全局变量  （define定义变量 ）
+int main()
+ {	
+	printf("%d\n",max);
+
+	return 0;
+}
+
+
+define定义宏
+#include <stdio.h>
+#include <stdlib.h>
+#define add(x,y)((x)+(y))//加括号使printf里的计算 把add当做一个整体 
+int main()
+{	
+	printf("%d\n",4*add(2,3));
+return 0;} 
