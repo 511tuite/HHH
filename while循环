@@ -1,0 +1,51 @@
+//原while函数示例
+
+#include<stdio.h>
+int main()
+{
+	int i = 0;
+	while (i <= 10)
+	{
+		
+		printf("%d\t", i);
+		i++;
+	}
+	return 0;
+}
+
+
+//插入if函数里使用continue
+int main()
+{
+	int i = 1;
+	while(i<=10)
+	{
+		if(5==i)//当i<5时，进行whlie循环；当i=5时，进入if函数，continue的作用是跳过本次循环continue后面的代码，直接去判断部分，看是否进行下一次循环
+		{
+			continue;
+		}
+		printf("%d\n", i);
+		i++;
+
+	}
+
+	return 0;
+}
+
+
+//插入if函数里使用break
+int main()
+
+{
+	int i = 1;
+	while (i <= 10)
+	{
+		if (5 == i)
+		{
+			break;//当i<5时，进行whlie循环；当i=5时，进入if函数，break用于永久的终止循环。
+		}
+		printf("%d\n", i);
+		i++;
+	}
+	return 0;
+}
