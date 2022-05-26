@@ -1,0 +1,54 @@
+#include<stdio.h>
+int main()
+{
+	int day = 0;
+	scanf_s("%d",&day);
+	switch (day)
+	{
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		printf("工作日");
+			break;
+		case 6:
+		case 7:
+		printf("休息日");
+			break;
+		default:
+			printf("输入错误");
+			break;
+	}
+	return 0;
+}
+
+
+6个case 输出n=5,m=3;
+int main()
+{
+	int n = 1;
+	int m = 2;
+	
+	switch (n)
+	{
+	case 1: n++;//n=2
+	case 2: m++;//m=3
+	case 3:
+		switch (n)
+	{
+	case 1:m++;
+	case 2:n++; m++;//n=3,m=4
+		break;
+	}
+	case 4:n++;//n=4 m=4
+	case 5:n++; m--;//n=5 m=3
+	
+
+		
+		break;
+	}
+	printf("n=%d,m=%d", n,m);
+	
+	return 0;
+}
