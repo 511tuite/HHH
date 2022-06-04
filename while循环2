@@ -1,0 +1,53 @@
+#include<stdio.h>
+int main()
+{
+
+	char password[20] = { 0 };
+	printf("请输入密码：\n");
+	scanf_s("%s", password,20);
+	printf("请确认密码（Y/N）:\n");
+	int tmp = 0;
+  getchar();//清理缓冲区1：清理'\n'
+
+
+	while ((tmp = getchar()) != '\n')//清理缓冲区2：当getchar识别到'\n'并将其赋给tmp，则"ch=getchar()!=‘\n’不成立"，则跳出循环 
+	{
+		;//输入空白语句
+	}
+	int ch = getchar();
+	if (ch == 'Y')
+	{
+		printf("确认成功！");
+	}
+	else
+	{
+		printf("确认失败！");
+	}
+
+	return 0;
+}
+
+
+
+
+//int main()
+// {
+// int tmp=0;
+// while((tmp=getchar())!='\n')
+// {
+//		 ;
+// }
+// return 0;
+// }
+// 
+//int main()
+//{
+//	int ch = 0;
+//	while ((ch = getchar()) != EOF)
+//	{
+//		if (ch < '0' || ch > '9')
+//			continue;
+//		putchar(ch);
+//	}
+//	return 0;
+//}
